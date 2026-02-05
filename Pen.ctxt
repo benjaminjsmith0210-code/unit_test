@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Pen
+comment0.text=\r\n\ Name\:\ Benjamin\ Smith\r\n\ Student\ \#\:\ T00769893\r\n\ Assignment\ Number\:\ 1\r\n\ Due\ Date\:\ Feb\ 4/2026\r\n\ Program\ Description\:\ A\ child\ class\ of\ class\ Item\ that\ adds\ a\ colour\ paramater\ and\ required\ methods\ for\ the\ colour\ paramater,\ also\ updates\ the\ toString\r\n\ method\ of\ the\ parents\ class\ to\ include\ the\ colour\ methods\r\n
+comment1.params=
+comment1.target=Pen()
+comment2.params=newCol
+comment2.target=Pen(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getCol()
+comment4.params=newCol
+comment4.target=void\ setCol(java.lang.String)
+comment5.params=name\ price\ newCol
+comment5.target=void\ set(java.lang.String,\ double,\ java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=o\ p
+comment7.target=boolean\ equals(Item,\ Pen)
+numComments=8

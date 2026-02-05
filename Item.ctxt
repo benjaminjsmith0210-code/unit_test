@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Item
+comment0.text=\r\n\ Name\:\ Benjamin\ Smith\r\n\ Student\ \#\:\ T00769893\r\n\ Assignment\ Number\:\ 1\r\n\ Due\ Date\:\ Feb\ 4/2026\r\n\ Program\ Description\:\ A\ default\ parent\ class\ file\ to\ be\ used\ as\ a\ constructor\ in\ the\ other\ classes\r\n\ and\ act\ as\ the\ blueprint\ for\ the\ declorations\ and\ formating\ required\r\n
+comment1.params=
+comment1.target=Item()
+comment2.params=newName\ newPrice
+comment2.target=Item(java.lang.String,\ double)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=
+comment4.target=double\ getPrice()
+comment5.params=newName
+comment5.target=void\ setName(java.lang.String)
+comment6.params=newPrice
+comment6.target=void\ setPrice(double)
+comment7.params=newName\ newPrice
+comment7.target=void\ set(java.lang.String,\ double)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=o
+comment9.target=boolean\ equals(Item)
+numComments=10

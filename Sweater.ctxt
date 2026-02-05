@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Sweater
+comment0.text=\r\n\ Name\:\ Benjamin\ Smith\r\n\ Student\ \#\:\ T00769893\r\n\ Assignment\ Number\:\ 1\r\n\ Due\ Date\:\ Feb\ 4/2026\r\n\ Program\ Description\:\ A\ child\ of\ class\ Item\ that\ adds\ a\ size\ paramater\ and\ methods\ for\ using\ that\ size\ method\ as\ well\ as\ a\ toString\ to\ add\ the\ size\ \r\n\ to\ parent\ classes\ toString\r\n
+comment1.params=
+comment1.target=Sweater()
+comment2.params=newSize
+comment2.target=Sweater(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getSize()
+comment4.params=newSize
+comment4.target=void\ setSize(java.lang.String)
+comment5.params=name\ price\ newSize
+comment5.target=void\ set(java.lang.String,\ double,\ java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=s\ o
+comment7.target=boolean\ equals(Sweater,\ Item)
+numComments=8
