@@ -18,7 +18,7 @@ public class Application extends Item
         Sweater sweater2 = new Sweater("medium");   //Sweater, child of Item with size
         
        
-        
+        System.out.println("Hello World!");
         
         //initial test for items with no set paramters
         System.out.println("testing items with no information and default constructor: ");
