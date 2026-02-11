@@ -56,7 +56,7 @@ public class Item
         return "Name = " + name + ", price = $" + price;
     }
     
-    public boolean equals(Item o)
+    public boolean equals(Object o)
     {
         if (this == o)
             return true;
@@ -73,4 +73,6 @@ public class Item
             && this.price == (item.price);
             
     }
+    
+    
 }

@@ -4,8 +4,10 @@
  * Student #: T00769893
  * Assignment Number: 1
  * Due Date: Feb 4/2026
- * Program Description: A test application program to test created methods in created classes to be shown in the console
+ * Program Description: A test application program to test created methods
+ * in created classes uainf inheritance to be shown in the console
  */
+
 public class Application extends Item 
 {
     public static void main(String[] args)
@@ -13,12 +15,13 @@ public class Application extends Item
         Item item1 = new Item();            //default Item for testing
         Item item2 = new Item("Item", 10);  //Item with name and price set
         Pen pen1 = new Pen();               //Pen, child of Item with nothing set
-        Pen pen2 = new Pen("black");        //Pen, child of Item with colour
+        Pen pen2 = new Pen("TRU pen", 15, "black");        //Pen, child of Item with colour
         Sweater sweater1 = new Sweater();   //Sweater, child of Item with nothing set
-        Sweater sweater2 = new Sweater("medium");   //Sweater, child of Item with size
+        Sweater sweater2 = new Sweater("TRU pullover", 95, "medium");   //Sweater, child of Item with size
         Textbook text1 = new Textbook();    //Textbook, child of item with default paramaters
-        Textbook text2 = new Textbook("Java Principles"); //Textbook, child of item with set name
+        Textbook text2 = new Textbook("Book", 175, "Java Principles"); //Textbook, child of item with set name
         String nullT = "";
+        Item[] listA = new Item[8];
         
         //initial test for items with no set paramters
         System.out.println("testing items with no information and default constructor: ");
@@ -30,7 +33,7 @@ public class Application extends Item
         
         //testing child classes with default paramaters
         System.out.println("\nShowing initial data values for objects of the \"Item\", \"Pen\", \"Sweater\", \"Textbook\" classes: ");
-        System.out.println("\nitem1: " + item1 + "\npen1" + pen1 + "\nsweater1: " + sweater1 + "\ntext1: " + text1);
+        System.out.println("\nitem1: " + item1 + "\npen1: " + pen1 + "\nsweater1: " + sweater1 + "\ntext1: " + text1);
         
         //using setCol and setSize and setTitle from classes Pen, Sweater, Textbook
         System.out.println("\nusing methods setCol from class Pen and setSize from class Sweater and setTitle from class Textbook. ");
@@ -102,7 +105,7 @@ public class Application extends Item
         System.out.println("pen1.getCol(): " + pen1.getCol() + "\nsweater1.getSize(): " + sweater1.getSize());
         System.out.println("text1.getTitle(): " + text1.getTitle());
         
-        //testing for cases with different object paramaters
+        //testing for cases with different object methods
         System.out.println("\ntesting for equals method between classes, expected output: \"false\"");
         System.out.println("item1.equals(pen1): " + item1.equals(pen1));
         System.out.println("item1.equals(sweater1): " + item1.equals(sweater1));
@@ -112,13 +115,15 @@ public class Application extends Item
         System.out.println("\nusing set method for item1 and item2: item.set(\"blanket\", 17.50) ");
         item1.set("blanket",17.50);
         item2.set("blanket",17.50);
-        System.out.println("\ntesting item1.equals(item2), expected output \"true\": " + item1.equals(item2));
+        System.out.println("\ntesting equals methods for items with same name and price: ");
+        System.out.println("testing item1.equals(item2), expected output \"true\": " + item1.equals(item2));
         
         //changing one paramater and expecting false
         System.out.print("\nsetting price on item2: item2.setPrice(15.50) ");
         item2.setPrice(15.50);
         System.out.println("new price is: " + item2.getPrice());
-        System.out.println("\ntesting item1.equals(item2), expected output \"false\": " + item1.equals(item2));
+        System.out.println("\ntesting items with different price: ");
+        System.out.println("testing item1.equals(item2), expected output \"false\": " + item1.equals(item2));
         
         //testing equals methods for objects of Pen and Sweater classes
         System.out.println("\ntesting .equals methods of child classes Pen and Sweater and Textbook. ");
@@ -142,8 +147,9 @@ public class Application extends Item
         System.out.println("\nPrinting variables: \n" + pen1 + "\n" + pen2 + "\n" + sweater1 + "\n" + sweater2);
         System.out.println(text1 + "\n" + text2);
         
-        //testing equals methods for pen, sweater, text
-        System.out.println("\ntesting equals method with expected reults \"false\": ");
+        //testing equals methods for pen, sweater, text with different names and prices
+        System.out.println("\ntesting child objects with different names and prices: ");
+        System.out.println("testing equals method with expected reults \"false\" for different name and price on Pen objects Sweater objects and different names on text objects: ");
         System.out.println("pen1.equals(pen2): " + pen1.equals(pen2) + "\n" + "sweater1.equals(sweater2): " + sweater1.equals(sweater2));
         System.out.println("text1.equals(text2): " + text1.equals(text2));
         
@@ -160,7 +166,7 @@ public class Application extends Item
         //setting a variable to null
         nullT = null ;
         //testing method
-        System.out.println("testing equals method with null variable, expected \"false\": \npen.equals(nullT) " + pen1.equals(nullT));
+        System.out.println("testing equals method with null variable, expected \"false\": \npen.equals(nullT): " + pen1.equals(nullT));
         
         //giving variables paramaters again
         System.out.println("\nsetting variables to test more equals methods: ");
@@ -186,13 +192,13 @@ public class Application extends Item
         text1.set("Read", 75.55, "Text");
         
         //testing the equals methods of Pen and Sweater when inkCol and Textbook and Size and title when they are the same 
-        System.out.println("\ntesting equals method of child classes to see if parent class is properly called due to the specific variables in the child classes being equal. ");
+        System.out.println("\ntesting equals method of child classes to see if parent class is properly with name and price different but added methods being the same in the child classes. ");
         System.out.println("\npen1.equals(pen2), expected result \"false\": " + pen1.equals(pen2));
         System.out.println("sweater1.equals(sweater2), expected result \"false\": " + sweater1.equals(sweater2));
         System.out.println("text1.equals(text2), expected result \"false\": " + text1.equals(text2));
         
         //setting values of Pen and Sweater and Textbook objects to be equal
-        System.out.println("\nsetting objects to be equal: ");
+        System.out.println("\nsetting objects to have same name price and added method: ");
         System.out.println("\nsetting pen1,pen2(\"TRU Pen\", 5.50, )");
         System.out.println("setting sweater1,sweater2.set(TRU \"Sweater\", 19.95) ");
         System.out.println("setting text1,text2.set(\"TRU text\", 105.55, \"textbook\") ");
@@ -209,21 +215,97 @@ public class Application extends Item
         System.out.println("\nPrinting variables: \n" + pen1 + "\n" + pen2 + "\n" + sweater1 + "\n" + sweater2);
         System.out.println(text1 + "\n" + text2);
         
-        //testing equals methods for expected "true"
-        System.out.println("\ntesting equals method on expected true outcomes: ");
+        //testing equals methods for expected items with the same data
+        System.out.println("\ntesting equals method on objects with the same name, price, and added method: ");
         System.out.println("pen1.equals(pen2): expected output \"true\": " + pen1.equals(pen2) );
         System.out.println("sweater1.equals(sweater2): expected output \"true\": " + sweater1.equals(sweater2));
         System.out.println("text1.equals(text2): expected output \"true\": " + text1.equals(text2));
         
-        //testing for case sensitivty in equals method
-        System.out.println("\ntesting the equals method for case sensitivity ");
-        System.out.println("\npen1.equals(pen2) expected output: \"true\": " + pen1.equals(pen2));
+        //above is general testing here is the specific testing for price and name asked for
+        System.out.println("\nTesting equals method for objects with only name different: ");
+        System.out.println("as the objects were just tested with the same data, using the setName method ");
+        System.out.println("I will: pen1.setName(\"Not TRU PEN\") ");
+        
+        //setting pen1 to a newName
+        pen1.setName("Not TRU PEN");
+        
+        //testing for just different name
+        System.out.println("\ntesting equals method for two objects with only different names: ");
+        System.out.println("pen1.equals(pen2): expected result false.\nactual result: " + pen1.equals(pen2));
+        
+        //testing for different prices
+        System.out.println("\nTesting equals method for only price diference using .setprice on sweater1 ");
+        System.out.println("sweater1.setPrice(55.55) ");
+        
+        //setting sweater1 to newPrice
+        sweater1.setPrice(55.55);
+        //testing for only price being different
+        System.out.println("\ntesting sweater1.equals(sweater2): expected result false \nactual result: " + sweater1.equals(sweater2));
+        
+        //adding objects into the array listA
+        System.out.println("Populating array: listA, with paramatized objects ");
+        //printing current variables
+        System.out.println("\nPrinting variables: \n" + item1 + "\n" + item2 + "\n" + pen1 + "\n" + pen2 + "\n" + sweater1 + "\n" + sweater2);
+        System.out.println(text1 + "\n" + text2);
+        //adding objects to listA
+        listA [0] = item1;
+        listA [1] = item2;
+        listA [2] = pen1;
+        listA [3] = pen2;
+        listA [4] = sweater1;
+        listA [5] = sweater2;
+        listA [6] = text1;
+        listA [7] = text2;
+        
+        System.out.println("\nPrinting elements of array: listA ");
+        for (int i = 0; i <listA.length; i++)
+        {
+            System.out.print(listA[i]);
+            if (i < listA.length - 1)
+            {
+                System.out.print("\n");
+            }
+        }
+        
+        System.out.println("Printing toString for object in listA[7]: " + listA[7]);
+        System.out.println("\nChanging title of object stored at: listA[7] ");
+        
+        if(listA[7] instanceof Textbook)
+        {
+            Textbook text = (Textbook) listA[7];
+            text.setTitle("different Title");
+        }
+        
+        System.out.println("Printing object at listA[7] with new title: .setTitle(\"different Title\")\n");
+        System.out.println(listA[7]);
+        
+        System.out.println("\nSorting array by price descending: \n");
+        System.out.println("Sorting done by looping through each element of the array and checking if the previous objects getPrice return value is larger ");
+        System.out.println("than the next one and storing the larger of the two in a temp variable\nand looping through the array until the previous items getPrice is always larger than the next. \n");
         
         
+         for (int i = 0; i < listA.length - 1; i++) {
+             
+            for (int j = 0; j < listA.length - i - 1; j++) {
+
+                if (listA[j].getPrice() < listA[j + 1].getPrice()) {
+                    Item temp = listA[j];
+                    listA[j] = listA[j + 1];
+                    listA[j + 1] = temp;
+                }
+            }
+        }
         
+        System.out.println("Printing sorted list in descending order \n");
+        for (int i = 0; i < listA.length; i++)
+        {
+            System.out.println(listA[i]);
+        }
         
-    
+        System.out.println("\nfinding item in list with highest price using sort method above: ");
+        System.out.println("listA[0], when printed after sorting shows the object with the highest price. ");
+        System.out.println("\n" + listA[0]);
         
-         }
+    }
 
 }

@@ -15,11 +15,13 @@ public class Sweater extends Item
 
     public Sweater()            //constructor for a sweater without a set size
     {
+        super();
         size = "not defined";
     }
     
-    public Sweater(String newSize)      //constructor for size
+    public Sweater(String name, double price, String newSize)      //constructor for size
     {
+        super(name, price);
         size = newSize;   
     }
     
@@ -44,7 +46,7 @@ public class Sweater extends Item
         return super.toString() + ", size = " + size;
     }
     
-    public boolean equals(Sweater s, Item o)
+    public boolean equals(Sweater s, Object o)
     {
         super.equals(o);
         

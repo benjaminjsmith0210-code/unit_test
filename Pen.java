@@ -13,12 +13,14 @@ public class Pen extends Item
     private String inkCol;
     
     public Pen( )                   //constructor for an pen that has no set colour
-    {
-         inkCol = "not set";
+    { 
+        super();
+        inkCol = "not set";
     }
     
-    public Pen(String newCol )      //constructor for a pens colour 
+    public Pen(String name, double price, String newCol )      //constructor for a pens colour 
     {
+        super(name, price); 
         inkCol = newCol;
     }
     
@@ -43,7 +45,7 @@ public class Pen extends Item
         return super.toString() + ", colour = " + inkCol;    
     }
     
-    public boolean equals(Item o, Pen p)
+    public boolean equals(Object o, Pen p)
     {
         super.equals(o);
             if(!(p instanceof Pen))

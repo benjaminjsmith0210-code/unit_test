@@ -18,5 +18,5 @@ comment7.target=void\ set(java.lang.String,\ double)
 comment8.params=
 comment8.target=java.lang.String\ toString()
 comment9.params=o
-comment9.target=boolean\ equals(Item)
+comment9.target=boolean\ equals(java.lang.Object)
 numComments=10

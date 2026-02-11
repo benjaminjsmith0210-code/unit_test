@@ -12,11 +12,13 @@ public class Textbook extends Item
 
     public Textbook()
     {
+        super();
         title = "not defined";
     }
     
-    public Textbook(String newTitle)
+    public Textbook(String name, double price, String newTitle)
     {
+        super(name, price);
         title = newTitle;
     }
     
@@ -41,9 +43,10 @@ public class Textbook extends Item
         return super.toString() + ", textbook title: " + title;
     }
     
-        public boolean equals(Textbook t, Item o)
+        public boolean equals(Textbook t, Object o)
     {
-        super.equals(o);
+        if (!super.equals(o))
+            return false;
         
             if(!(t instanceof Textbook))
                 return false;
